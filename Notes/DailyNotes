@@ -1,0 +1,57 @@
+7/5/2024
+===============================
+Automation Testing :
+
+Testing the Application feature with the help of AUtomation tool 
+
+Automation Tool :
+
+Selenium
+Protector
+Ranorex
+Appium - mobile Application test 
+Sahi
+Sahi Pro
+
+----------------------------
+Dis Advantage Manual 
+
+1.required more Resources 
+2. time consuming -- Cross Browser Test 
+3. Regression Testing -- time consuming and its difficult 
+4.Test Cycle duration increase 
+
+Adv Automation Test
+------------------------------
+1. required less resources
+2. required less time -Cross Browser Test
+3. regression test - required less time and its easy to perform 
+4 .Test Cycle duration decrease
+
+ ==========================================
+Why Selenium /Adv Selenium
+
+1. Open source tool /Library
+2. no licenece required -- there is no project cost include 
+3. support multiple languages -- java ,C#,Python ,pearl ,JavaScript 
+4. SUpport multiple Operating System
+5. Cross Test is easy to Implement  
+
+Dis Advantages selenium 
+------------------------
+1. we can automate only Web Application 
+   we can not automate Desktop Application .ex .Calculator 
+2.we can not handle Captcha and Barcode
+3.File uploading and Downloading task we can not handle
+  AutoIT tool third party /Robot Class -- 
+4.we can do Regression Test but we can not do Adhoc Testing 
+
+====================================================================
+Project Eclipse -- Maven Project
+Maven - Build Managment Tool 
+
+src/Main/java
+src/main/resources
+src/test/java
+src/test/resources
+pom.xml -----------> add depandancy -- jar file 
