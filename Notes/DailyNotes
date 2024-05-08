@@ -55,3 +55,31 @@ src/main/resources
 src/test/java
 src/test/resources
 pom.xml -----------> add depandancy -- jar file 
+
+
+=================================================================
+Selenium WebDriver 
+
+Search Context (I)--extends--WebDriver (I) -Implements--Remote WebDriver (C)-extends--Multiple Browser Driver Classes
+
+
+-- need executable setup 
+
+---WebDriverManager
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
