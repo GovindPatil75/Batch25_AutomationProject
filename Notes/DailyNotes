@@ -66,14 +66,29 @@ Search Context (I)--extends--WebDriver (I) -Implements--Remote WebDriver (C)-ext
 -- need executable setup 
 
 ---WebDriverManager
+========================================
+Anything on Webpage -- WebElement  
 
+text field
+button
+Img Images
+logo 
+Checkbox 
 
+----------Locators ----> we identify the WebElement 
+8 types 
 
+1. Id
+2. Name
+3. className
+4. link text
+5. partial link text
+6. Xpath 
+7. css
+8. tagname
 
-
-
-
-
+WebElement email=driver.findElement(By.id("email"));
+email.sendKeys("12345678");
 
 
 
