@@ -31,7 +31,31 @@ public class Session_2 {
 		WebElement Email=driver.findElement(By.id("email"));
 		Email.sendKeys("Test@gmail.com");
 		
+		// password WebElement
 		
+		WebElement password=driver.findElement(By.id("pass"));
+		password.sendKeys("12345678");
+		
+		// Login Button  // u_0_5_H8
+		
+		WebElement loginBtn=driver.findElement(By.name("login"));
+		loginBtn.click();
+		
+		// Verify 
+		
+		String ActualTitle=driver.getTitle();
+		
+		System.out.println(ActualTitle);
+		
+		String ExpectedTitle="FaceBook Homepage";
+		
+		if(ActualTitle.equals(ExpectedTitle)) {
+			
+			System.out.println("Test case Pass");
+			
+		}else {
+			System.out.println("Test case Fail");
+		}
 		
 	}
 
