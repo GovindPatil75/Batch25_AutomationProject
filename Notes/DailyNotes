@@ -94,12 +94,81 @@ email.sendKeys("12345678");
 
 Xpath 
 
-1. Absolute Xpath
+1. Absolute Xpath (/)
 parent node start --immidiate child node ---element 
 
 WebElement Email=driver.findElement(By.xpath("/html/body/div[1]/div[1]/div[1]/div/div/div/div[2]/div/div[1]/form/div[1]/div[1]/input"));
 
-2. Relative Xpath
+2. Relative Xpath (//)
+
+navigate parent node to any child / child node  
+
+
+1.xpath by attribute
+-----------------------
+//tagname[@attributename='attribute value']
+//input[@id='email']
+
+WebElement email=driver.findElement(By.xpath("//input[@id='email']"));
+
+2.xpath by text()
+-------------------------
+//tagname[text()='text value']
+
+//a[text()='Forgotten password?']
+
+WebElement FP=driver.findElement(By.xpath("//a[text()='Forgotten password?']"));
+
+3. xpath by contains() 
+-----------------------------------
+//tagname[contains(@attribute name ,'Static value')]
+
+//button[contains(@id,'u_0_5_')]
+
+driver.findElement(By.xpath("//button[contains(@id,'u_0_5_')]"));
+
+//tagname[contains(text(),'static value text')]
+
+//a[contains(text(),'Forgotten ')]
+
+driver.findElement(By.xpath("//a[contains(text(),'Forgotten ')]"))
+
+4. xpath by Index 
+----------------------------
+(xpath expression)[index]
+
+(//input[@type='text'])[4]
+
+driver.findElement(By.xpath("(//input[@type='text'])[4]"));
+
+
+
+
+
+
+
+tagname : anything after < this arrow 
+
+ <div
+ <input
+ <li
+ <button
+ <a
+attribute name
+attribute value
+
+attribute name="attribute value "
+
+text :
+
+>text<
+
+>Forgotten password?<
+
+
+
+
+
 
 
 
