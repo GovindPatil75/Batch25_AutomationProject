@@ -165,9 +165,39 @@ text :
 
 >Forgotten password?<
 
+---------------------------------------------
+attribute 
+//tagname[@attribute name='value']
 
+text()
+//tagname[text()='text value']
 
+contains()
 
+//tagname[contains(@attribute name ,'static value')]
+//tagname[contains(text(),'partial text value')]
+
+index 
+(xpath expression)[index]
+
+===========================================
+How to Handle Drop Down 
+
+---------------
+tagname ---- < Select  
+
+Select class --- 
+
+// WebElement identify
+
+WebElement DrpElement=driver.findElement(By.xpath("Xpath Expression"));
+
+// create the Object of Select
+ Select sel=new Select(DrpElement);
+
+sel.selectbyIndex(4); // 0,1,2,3,4,5
+sel.selectbyvalue("value"); 
+sel.SelectByVisibiletext("text");
 
 
 
