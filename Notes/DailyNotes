@@ -199,6 +199,27 @@ sel.selectbyIndex(4); // 0,1,2,3,4,5
 sel.selectbyvalue("value"); 
 sel.SelectByVisibiletext("text");
 
+===============================================
+
+full pages Screenshot 
+
+TakesScreenshot ts=driver;
+File Src=ts.getscreenshotAs(OutPutType.FILE);
+File detsn=new File(location\test.png);
+FileHandler.copyFile(Src,detsn);
+
+Element Screenshot 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
