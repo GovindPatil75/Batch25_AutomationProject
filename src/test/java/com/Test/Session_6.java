@@ -25,6 +25,9 @@ public class Session_6 {
 		driver.get("https://demo.guru99.com/test/newtours/register.php");
 		driver.manage().window().maximize();
 		
+		Library.getScreenshot_fullPage(driver);
+		
+		
 		//Full Page Screenshot
 		
 		String RM=RandomString.make(3);
@@ -34,9 +37,11 @@ public class Session_6 {
 		String CurrentDate=formater.format(date);
 		String Cdate=CurrentDate.replace("/","_").replace(" ", "_").replace(":", "_");
 	
+		String Location =System.getProperty("user.dir");
+		System.out.println(Location);
 		TakesScreenshot ts=driver;
 		File src=ts.getScreenshotAs(OutputType.FILE);
-		File destn=new File("C:\\Users\\Dell\\eclipse-workspace\\Batch25_AutomationProject\\"+Cdate+".png");
+		File destn=new File(Location+"\\"+Cdate+".png");
 		FileUtils.copyFile(src, destn);
 		
 		// WebELement Screenshot 
@@ -46,7 +51,7 @@ public class Session_6 {
 		File destn1=new File("C:\\Users\\Dell\\eclipse-workspace\\Batch25_AutomationProject\\Logo.png");
 		FileUtils.copyFile(Src1, destn1);
 	
-	
+	   Library.getWebElementScreenshot(Register);
 	
 	
 	}
