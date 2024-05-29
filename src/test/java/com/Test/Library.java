@@ -6,6 +6,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
 public class Library {
@@ -34,6 +35,10 @@ public class Library {
 		select.selectByVisibleText(text);
 	}
 	
-	
+	public static Actions getAction(ChromeDriver driver) {
+		
+		Actions act=new Actions(driver);
+		return act;
+	}
 	
 }

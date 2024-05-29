@@ -210,6 +210,18 @@ FileHandler.copyFile(Src,detsn);
 
 Element Screenshot 
 
+========================================
+mouse Hover and Keyboard related Action - Actions Class
+
+mouse hover +Click 
+rightclick+option click
+doublclick action 
+
+Drag and Drop 
+
+Copy -Paste
+
+Actions act=new Actions(driver);
 
 
 

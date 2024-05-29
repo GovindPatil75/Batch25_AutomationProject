@@ -21,6 +21,8 @@ public class Session_5 {
 		// WebELement -- Drop Down --Tagname -- Select class Handle
 		
 		WebElement Drp_Country=driver.findElement(By.xpath("//select[@name='country']"));
+		
+		Library.handleDropDown(Drp_Country, "INDIA");
 
 		Select sel=new Select(Drp_Country);
 		

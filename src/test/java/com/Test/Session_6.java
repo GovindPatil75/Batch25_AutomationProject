@@ -30,28 +30,28 @@ public class Session_6 {
 		
 		//Full Page Screenshot
 		
-		String RM=RandomString.make(3);
+		//String RM=RandomString.make(3);
 		
-		SimpleDateFormat formater=new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-		Date date=new Date();
-		String CurrentDate=formater.format(date);
-		String Cdate=CurrentDate.replace("/","_").replace(" ", "_").replace(":", "_");
+		//SimpleDateFormat formater=new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+		//Date date=new Date();
+		//String CurrentDate=formater.format(date);
+		//String Cdate=CurrentDate.replace("/","_").replace(" ", "_").replace(":", "_");
 	
-		String Location =System.getProperty("user.dir");
-		System.out.println(Location);
-		TakesScreenshot ts=driver;
-		File src=ts.getScreenshotAs(OutputType.FILE);
-		File destn=new File(Location+"\\"+Cdate+".png");
-		FileUtils.copyFile(src, destn);
+		//String Location =System.getProperty("user.dir");
+		//System.out.println(Location);
+		//TakesScreenshot ts=driver;
+		//File src=ts.getScreenshotAs(OutputType.FILE);
+		//File destn=new File(Location+"\\"+Cdate+".png");
+		//FileUtils.copyFile(src, destn);
 		
 		// WebELement Screenshot 
 		
-		WebElement Register=driver.findElement(By.xpath("//img[@src='images/mast_register.gif']"));
-		File Src1=Register.getScreenshotAs(OutputType.FILE);
-		File destn1=new File("C:\\Users\\Dell\\eclipse-workspace\\Batch25_AutomationProject\\Logo.png");
-		FileUtils.copyFile(Src1, destn1);
+		//WebElement Register=driver.findElement(By.xpath("//img[@src='images/mast_register.gif']"));
+		//File Src1=Register.getScreenshotAs(OutputType.FILE);
+		//File destn1=new File("C:\\Users\\Dell\\eclipse-workspace\\Batch25_AutomationProject\\Logo.png");
+		//FileUtils.copyFile(Src1, destn1);
 	
-	   Library.getWebElementScreenshot(Register);
+	   //Library.getWebElementScreenshot(Register);
 	
 	
 	}
