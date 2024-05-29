@@ -14,11 +14,12 @@ public class ActionTest_1 {
 		WebDriverManager.chromedriver().setup();
 		ChromeDriver driver=new ChromeDriver();
 		driver.get("https://demo.guru99.com/test/simple_context_menu.html");
+		//https://demo.guru99.com/test/drag_drop.html
 		driver.manage().window().maximize();
 		
 		//WebElement SeleniumLink=driver.findElement(By.xpath("//a[text()='Selenium']"));
 		
-        Actions act=new Actions(driver);
+        //Actions act=new Actions(driver);
         
         // Mouse Hover +Click
         //act.moveToElement(SeleniumLink).click().build().perform();
@@ -33,8 +34,9 @@ public class ActionTest_1 {
         WebElement DoubleclickElement=driver.findElement(By.xpath("//button[text()='Double-Click Me To See Alert']"));
         
         //Double click 
-        act.doubleClick(DoubleclickElement).build().perform();
+        //act.doubleClick(DoubleclickElement).build().perform();
         
+        Library.getAction(driver).doubleClick(DoubleclickElement).build().perform();
         
 	}
 
