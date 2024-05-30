@@ -223,8 +223,14 @@ Copy -Paste
 
 Actions act=new Actions(driver);
 
+drag -- drop 
 
+===========================
+ex . webelement - Upper case data send 
 
+TEST
+Keys.
+down --data enter - up
 
 
 

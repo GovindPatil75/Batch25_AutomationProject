@@ -2,6 +2,7 @@ package com.Test;
 
 import java.io.File;
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
@@ -39,6 +40,20 @@ public class Library {
 		
 		Actions act=new Actions(driver);
 		return act;
+	}
+	
+	public static void getDragAndDropAction(ChromeDriver driver,WebElement src,WebElement target) {
+		Actions act=new Actions(driver);
+		act.dragAndDrop(src, target).build().perform();
+	}
+	
+	public static void getCopyPasteAction(ChromeDriver driver,WebElement element) {
+		Actions act=new Actions(driver);
+		act.keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).build().perform();
+		act.keyDown(Keys.CONTROL).sendKeys("c").keyUp(Keys.CONTROL).build().perform();
+		element.click();
+		act.keyDown(Keys.CONTROL).sendKeys("v").keyUp(Keys.CONTROL).build().perform();
+		
 	}
 	
 }
