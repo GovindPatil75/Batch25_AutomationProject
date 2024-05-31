@@ -38,7 +38,7 @@ public class ActionTest_3 {
 		//ctrl +v
 		act.keyDown(Keys.CONTROL).sendKeys("v").keyUp(Keys.CONTROL).build().perform();
 		
-		
+		Library.getCopyPasteAction(driver, email,driver.findElement(By.xpath("//input[@id='pass']")));
 		
 		
 		

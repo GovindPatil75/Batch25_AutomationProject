@@ -1,7 +1,11 @@
 package com.Test;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
 import org.apache.commons.io.FileUtils;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -47,13 +51,24 @@ public class Library {
 		act.dragAndDrop(src, target).build().perform();
 	}
 	
-	public static void getCopyPasteAction(ChromeDriver driver,WebElement element) {
+	public static void getCopyPasteAction(ChromeDriver driver,WebElement element,WebElement target) {
 		Actions act=new Actions(driver);
+		element.click();
 		act.keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).build().perform();
 		act.keyDown(Keys.CONTROL).sendKeys("c").keyUp(Keys.CONTROL).build().perform();
-		element.click();
+		target.click();
 		act.keyDown(Keys.CONTROL).sendKeys("v").keyUp(Keys.CONTROL).build().perform();
 		
+	}
+	
+	
+	public static String getExcelTestData(String Sheetname,int row,int cell) throws Exception {
+		
+        String filepath=System.getProperty("user.dir")+"\\TestData\\data.xlsx";
+		FileInputStream fis=new FileInputStream(filepath);
+		XSSFWorkbook wb=new XSSFWorkbook(fis);
+		String data_1=wb.getSheet(Sheetname).getRow(row).getCell(cell).getStringCellValue();
+		return data_1;
 	}
 	
 }
