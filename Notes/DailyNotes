@@ -240,6 +240,37 @@ sheet -- row ,cell
 
 Apache POI common
 Apache POI-ooxml
+============================
+//Test data -excel
+//Dropdown -handle 
+// Screenshot full page 
+
+=============================
+How to handle Scrolling in Automation 
+
+JavaScriptExecutor js=driver;
+
+//Top to Bottom 
+js.executescript("window.scrollBy(0,400)","");
+
+//Bottom to Top
+js.executescript("window.scrollBy(0,-400)","");
+---------------
+
+Pixel provide 
+WebElement
+
+WebElement EnglishUK=driver.findElement(By.xpath("//li[text()='English (UK)']")); 
+
+js.executeScript("arguments[0].scrollIntoView();",EnglishUK)
+
+
+
+
+
+
+
+
 
 
 

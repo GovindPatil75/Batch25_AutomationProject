@@ -6,6 +6,7 @@ import java.io.FileNotFoundException;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -69,6 +70,14 @@ public class Library {
 		XSSFWorkbook wb=new XSSFWorkbook(fis);
 		String data_1=wb.getSheet(Sheetname).getRow(row).getCell(cell).getStringCellValue();
 		return data_1;
+	}
+	
+	
+	public static void getScrollingWebElement(ChromeDriver driver ,WebElement element ) {
+		
+		JavascriptExecutor js=driver;
+		js.executeScript("arguments[0].scrollIntoView();", element);
+		
 	}
 	
 }
