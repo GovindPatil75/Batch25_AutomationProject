@@ -262,7 +262,37 @@ WebElement
 
 WebElement EnglishUK=driver.findElement(By.xpath("//li[text()='English (UK)']")); 
 
-js.executeScript("arguments[0].scrollIntoView();",EnglishUK)
+js.executeScript("arguments[0].scrollIntoView();",EnglishUK);
+
+=======================================================
+
+PopUp Handling 
+
+1. Alert -- How to handle Alert 
+
+  Type of Alert 
+  1.Simple Alert  --- warning message -- Button OK
+  2.Prompt Alert --- user input accept 
+  3.Confirmation Alert  --- ask for the confirmations 
+  
+  Alert alt=driver.switchto().alert();
+  
+  alt.gettext(); // Alert text 
+  alt.accept(); // Alert OK button
+  alt.dismiss(); // Alert Cancel Button 
+  alt.sendkeys("user input"); 
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
 
 
 

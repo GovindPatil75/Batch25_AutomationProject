@@ -28,11 +28,15 @@ public class ScrollingTest {
 		js.executeScript("window.scrollBy(0,-400)", "");
 		
 		Thread.sleep(3000); // 3 sec
+		
 		//Scrolling -WebElement 
 		
 		WebElement EnglishUK=driver.findElement(By.xpath("//li[text()='English (UK)']"));
 		
 		js.executeScript("arguments[0].scrollIntoView();", EnglishUK);
+		
+		
+		Library.getScrollingWebElement(driver, EnglishUK);
 
 	}
 
