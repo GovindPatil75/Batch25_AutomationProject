@@ -282,6 +282,32 @@ PopUp Handling
   alt.dismiss(); // Alert Cancel Button 
   alt.sendkeys("user input"); 
   
+  ==============================================
+  Child Browser window handle
+  
+  String ParentWID=driver.getwindowhandle(); // String -- Parent window ID
+  
+  Set<String> ALLID=driver.getwindowhandles(); // Set<String>  Parent window+Child Window ID
+  
+  
+  List<String> list=new ArrayList<String>(ALLID);
+  
+  list.get(0); // 
+  String CWID=list.get(1); //
+  
+  driver.switchto().window(CWID);
+  
+  //
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   
