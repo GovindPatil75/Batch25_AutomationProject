@@ -3,6 +3,9 @@ package com.Test;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -79,5 +82,24 @@ public class Library {
 		js.executeScript("arguments[0].scrollIntoView();", element);
 		
 	}
+	
+	public static List<String> getSwitchtoChildWindow(ChromeDriver driver,WebElement element) {
+		
+		element.click();
+		Set<String> ALLID=driver.getWindowHandles();
+		List<String> list=new ArrayList<String>(ALLID);
+		return list;
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 }

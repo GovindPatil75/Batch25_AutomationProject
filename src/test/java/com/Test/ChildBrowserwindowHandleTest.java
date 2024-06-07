@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Set;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -26,7 +27,7 @@ public class ChildBrowserwindowHandleTest {
         Set<String> ALLID=driver.getWindowHandles();
         System.out.println(ALLID);
         
-        List<String> list=new ArrayList(ALLID);
+        List<String> list=new ArrayList<String>(ALLID);
         
         String PWID=list.get(0);
         String CWID=list.get(1);
@@ -43,6 +44,14 @@ public class ChildBrowserwindowHandleTest {
         //driver.close(); // Current window 
         
         driver.quit(); // Current window + Open window close
+        
+        WebElement Click=driver.findElement(By.xpath("//a[text()='Click Here']"));
+        
+        List<String> list1=Library.getSwitchtoChildWindow(driver, Click);
+        
+        driver.switchTo().window(list1.get(1));
+        
+        
 	}
 
 }

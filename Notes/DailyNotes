@@ -298,8 +298,25 @@ PopUp Handling
   driver.switchto().window(CWID);
   
   //
+  ===============================================
+  String ParentWID=driver.getwindowhandle(); // String -- Parent window ID
   
+  Set<String> ALLID=driver.getwindowhandles(); // Set<String>  Parent window+Child Window ID
+  Case 2:
   
+  Iterator<String> IT=ALLID.iterator();
+  
+  while(IT.hasnext()){
+  
+    String CWID=IT.next();
+    
+    if(!ParentWID.equlals(CWID)){
+    
+    driver.switchto().window(CWID);
+    
+    
+    }
+  }
   
   
   
