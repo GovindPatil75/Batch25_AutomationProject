@@ -318,6 +318,27 @@ PopUp Handling
     }
   }
   
+  ===================================================
+  Iframe /Frame handle 
+  
+  driver.switchto().frame(index);
+  
+  driver.switchto().frame(name or ID);
+  
+  driver.switchto().frame(WebElement element);
+  
+  Element -action
+  
+  driver.switchto().deafultcontent();
+  
+  
+  Case 1 : Mainpage --- Frame 1--Frame2 -Frame3 
+  
+  WebElement element=driver.findELement(By.xpath("//frame[@src='frame_1.html']"));
+  
+  driver.switchto().frame(element);
+  
+  
   
   
   
