@@ -338,13 +338,16 @@ PopUp Handling
   
   driver.switchto().frame(element);
   
+  Case 2 :
+  
+  Mainpage --Outterframe --Innerframe
+  
+  driver.switchto().frame(element);  //Mainpage --Outterframe
+  driver.switchto().frame(element) ; //Outterframe --Innerframe
   
   
-  
-  
-  
-  
-  
+  driver.switchto().parentframe();  //Innerframe --Outterframe
+  driver.switchto().deafultcontent(); //Outterframe-- Mainpage 
   
   
   
