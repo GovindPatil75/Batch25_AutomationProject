@@ -348,6 +348,46 @@ PopUp Handling
   
   driver.switchto().parentframe();  //Innerframe --Outterframe
   driver.switchto().deafultcontent(); //Outterframe-- Mainpage 
+  =================================================
+  
+  TestNG -- Test Managment tool / TestNG Framework 
+  
+  TC 4
+  100 TC
+  60 -TC _regression
+  40 -TC -Critical Regression
+  
+  TestNG.xml --Runner file -- we can add multiple test classes 15 *5=75
+  
+  crossBrowser -- 
+  
+  Test Report -- html emailable report 
+  ===================================================
+  
+  Annoatation - Tag represent metadata -- additional info JVM and compiler provide
+  @Test
+  
+  Before
+  Test
+  After
+  
+  @BeforeSuite
+  public void BS(){
+    //
+  }
+  @BeforeTest
+  @BeforeClass
+  @BeforeMethod
+  
+  @Test
+  @Test
+  @Test
+  
+  @AfterMethod
+  @AfterClass
+  @AfterTest
+  @AfterSuite
+  
   
   
   

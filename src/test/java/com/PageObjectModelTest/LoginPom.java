@@ -8,6 +8,10 @@ public class LoginPom {
 	
 	// @FindBy(how=How.XPATH,using="xpath expression") private WebElement Element ;
 	
+	//Mechanism --variable and method Bind --Single Unit -- Class -Encapsulation
+	// 1.Variable private 
+	// 2.view or modify - public getter and setter method 
+	
 	@FindBy(how=How.XPATH,using="//input[@name='email']") 
 	private WebElement Email;
 	
