@@ -393,6 +393,39 @@ PopUp Handling
   3 -TC -CR
   7 -TC -R
   
+  =============================
+  xyz --- diffrent browser --- chrome ,Edge 
+  
+  
+  public static WebDriver driver;
+  
+  @Paramters("BrowserName")
+  @BeforeMethod
+  public void setUp(String BrowserName){
+  
+  if(BrowserName.equalsignore("Chrome")){
+  
+  WebDriverMnagaer.chromeDriver().setUp();
+  driver=new ChromeDriver();
+  
+  }
+  
+  else if(BrowserName.equlsaignorecase("Edge")) {
+   
+   WebDriverManager.edgeDriver().setup();
+   driver=new EdgeDriver();
+  }
+  
+  driver.get(" ");
+  driver.manage().window().maximize();
+  
+  }
+  
+  @AfterMethod
+  public void teardown(){
+  
+  }
+  
   
   
   
