@@ -426,9 +426,19 @@ PopUp Handling
   
   }
   
+  ================================================
+  enter email id
+  enter password
+  click on login button 
   
+  -------> Homepage 
   
+  String Expectedtitle ="ABC" ;
+  String ActualTitle=driver.gettitle(); // XYZ
   
+  Assert.assertequls(ActualTitle,Expectedtitle); // Pass -Fail
+  
+  syso();
   
   
   
